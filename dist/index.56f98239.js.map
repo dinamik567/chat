@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,UAAU;AAEhB,SAAS,MAAM","sources":["src/ts/index.ts"],"sourcesContent":["const message = 'Сообщение для Владоса';\r\n\r\ndocument.write(message);"],"names":[],"version":3,"file":"index.56f98239.js.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="screen">
+        <header class="header screen__header">
+            <button class="setting header__button" type="button">Настройки</button>
+            <button class="exit header__exit" type="button">Выход</button>
+        </header>
+
+        <div class="screen-inner">
+            <div id="screen-chat" class="screen-chat">
+                <template class="message-template">
+                        <p class="message-content">
+                            <span class="message-content__author"></span>
+                            <span class="message-content__text">Добрый день!</span>
+                        </p>
+                        <div class="message-time">18:45</div>
+                </template>
+            </div>
+        </div>
+
+        <form class="screen-form" name="screen-form"  action="">
+            <input class="screen-form__sent-message" placeholder="Сообщение.." type="text">
+            <button class="screen-form__button">-></button>
+        </form>
+    </div>
+    <dialog class="modal modal-settings">
+        <div class="modal-inner">
+            <div class="modal-screen">
+                <header class="header modal-settings__header">
+                    <button class="setting header__button" type="button">Настройки</button>
+                    <button class="button-close header__closed" type="button">X</button>
+                </header>
+
+                <form class="form-setting" name="form-settings" method="dialog" action="">
+                    <div class="form-settings__placeholder">Имя в чате</div>
+                    <div class="form-settings-inner">
+                        <input class="form-settings__input-nameId" type="text" placeholder="Стив">
+                        <button class="form-settings-button-confirm button-confirm" type="submit">-></button>
+                    </div>
+                </form>
+        </div>
+    </dialog>
+
+    <dialog  class="modal modal-authorization">
+        <div class="modal-inner">
+            <div class="modal-screen">
+                <header class="header modal-authorization__header">
+                    <button class="authorization-btn header__button" type="button">Авторизация</button>
+                    <button class="button-close header__closed" type="button">X</button>
+                </header>
+
+                <form name="form-authorization" method="dialog" action="">
+                    <label for="userEmail">
+                        <span class="form-authorization__email-placeholder">Почта:</span>
+                        <input class="form-authorization__input form-authorization__input-email" id="userEmail" type="email">
+                    </label>
+                    <div class="form-authorization__inner">
+                        <button class="form-authorization-btn form-authorization__recieve-code">Получить код</button>
+                        <button class="form-authorization-btn form-authorization__enter-code">Ввести код</button>
+                    </div>
+                </form>
+            </div>
+    </dialog>
+
+    <dialog class="modal modal-confirm">
+        <div class="modal-inner">
+            <div class="modal-screen">
+                <header class="header modal-confirm__header">
+                    <button class="confirm-btn header__button" type="button">Подтверждение</button>
+                    <button class="button-close header__closed" type="button">X</button>
+                </header>
+
+                <form class="form-confirm" name="form-confirm method="dialog" action="">
+                    <label for="enter-code">
+                        <span class="form-confirm__placeholder">Код:</span>
+                        <input class="form-confirm__input form-confirm__code" id="enter-code" type="text">
+                    </label>
+                    <button class="form-confirm-btn">Войти</button>
+                </form>
+            </div>
+    </dialog>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
+

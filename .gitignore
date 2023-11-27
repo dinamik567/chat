@@ -1,0 +1,10 @@
+*.key
+*.env
+
+.parcel-cache
+.dist
+node_modules
+.eslintrc.json
+.prettierrc
+
+
